@@ -4,7 +4,7 @@
  * @constructor
  * @param {number}  
  */
-function Account () {
+function Account() {
     this.name = null
     this.channel = null
 }
@@ -15,7 +15,7 @@ function Account () {
  * @param {String} name
  */
 Account.prototype.setUserName = function (name) {
-    if(!name){
+    if (!name) {
         return
     }
     this.name = name;
@@ -28,7 +28,7 @@ Account.prototype.setUserName = function (name) {
  * @return {String}
  */
 Account.prototype.getUserName = function () {
-    if (this.name){
+    if (this.name) {
         return this.name
     }
     return cc.sys.localStorage.getItem('name');
@@ -40,11 +40,11 @@ Account.prototype.getUserName = function () {
  * @param {String} channel
  */
 Account.prototype.setUserChannel = function (channel) {
-    if(!channel){
+    if (!channel) {
         return
     }
     this.channel = channel;
-    cc.sys.localStorage.setItem('channel',channel);
+    cc.sys.localStorage.setItem('channel', channel);
 };
 
 /**
@@ -53,7 +53,7 @@ Account.prototype.setUserChannel = function (channel) {
  * @return {String}
  */
 Account.prototype.getUserChannel = function () {
-    if (this.channel){
+    if (this.channel) {
         return this.channel
     }
     return cc.sys.localStorage.getItem('channel');
@@ -66,5 +66,34 @@ Account.prototype.getChatDataChannel = function () {
 Account.prototype.setChatDataChannel = function (data) {
     this.chatData = data;
 };
+/**
+ * 
+ * 
+ * @returns 聊天的成员
+ */
+Account.prototype.getMembers = function () {
+    return this.memGroup || {};
+};
+/**
+ * 
+ * 
+ * @param {any} memGroup 
+ */
+Account.prototype.setMembers = function (memGroup) {
+    this.memGroup = memGroup;
+};
+
+Account.prototype.addMember = function (mem) {
+    let memGroup = this.getMembers();
+    memGroup[mem] = mem;
+};
+
+Account.prototype.kickMember = function (mem) {
+    let memGroup = this.getMembers();
+    memGroup[mem] = null;
+};
+
+var account = new Account()
+window.account = account
 
 module.exports = Account;

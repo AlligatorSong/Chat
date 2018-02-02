@@ -13,19 +13,130 @@ cc.Class({
         scrollView: cc.ScrollView,
         viewContent: cc.Layout,
         chatItem: cc.Prefab,
+        listItem: cc.Prefab,
         returnBtn: cc.Button,
         enterBtn: cc.Button,
         enterText: cc.EditBox,
         showBtn: cc.Button,
         nameLab: cc.Label,
-        roomLab: cc.Label
+        roomLab: cc.Label,
+        tipLayer: cc.Node,
+        listLayer: cc.Node,
+        listContent: cc.Layout,
+        tipLab: cc.Label,
+        toLab: cc.Label
+    },
+
+    showTip: function showTip(word) {
+        this.tipLayer.stopAllActions();
+        this.tipLayer.y = this.tipPosY;
+        var height = this.tipLayer.height;
+        this.tipLab.string = 'tip:\n\t ' + word;
+        var seq = cc.sequence(cc.moveBy(0.6, cc.p(0, height)), cc.delayTime(1), cc.moveBy(0.6, cc.p(0, -height)));
+        this.tipLayer.runAction(seq);
+    },
+
+    moveList: function moveList(isLeft) {
+        isLeft = isLeft || this.isLeftList;
+        this.listLayer.stopAllActions();
+        var width = this.listLayer.width;
+        if (isLeft) {
+            width = -width;
+        } else {
+            this.listLayer.x = this.listPosX;
+        };
+        this.listLayer.runAction(cc.moveBy(0.6, cc.p(width, 0)));
+        this.isLeftList = !isLeft;
+    },
+
+    initList: function initList() {
+        var memGroup = account.getMembers();
+        this.listContent.node.removeAllChildren();
+        this.addOneForList('All');
+        for (var key in memGroup) {
+            if (memGroup[key]) {
+                var element = memGroup[key];
+                this.addOneForList(element);
+            }
+        };
+    },
+
+    createOneForList: function createOneForList(name) {
+        var item = cc.instantiate(this.listItem);
+        var label = item.getComponent(cc.Label);
+        label.string = name;
+        var self = this;
+        item.on('touchend', function (event) {
+            self.toLab.string = name;
+            self.moveList(true);
+        }, self);
+        return item;
+    },
+
+    addOneForList: function addOneForList(name) {
+        var item = this.createOneForList(name);
+        this.listContent.node.addChild(item);
+    },
+
+    removeOneForList: function removeOneForList(name) {
+        var items = this.listContent.node.children;
+        var isRemove = false;
+        var newToName = void 0;
+        for (var key in items) {
+            if (items.hasOwnProperty(key)) {
+                var item = items[key];
+                var string = item.getComponent(cc.Label).string;
+                if (string === name) {
+                    item.removeFromParent();
+                    break;
+                } else if (!newToName) {
+                    newToName = name;
+                }
+            };
+        };
+        if (name === this.toLab.string) {
+            this.toLab.string = newToName || 'All';
+        };
     },
 
     // use this for initialization
     onLoad: function onLoad() {
+        this.isLeftList = false;
         // this.createList()
         this.nameLab.string = 'name:' + account.getUserName();
         this.roomLab.string = 'room:' + account.getUserChannel();
+        //
+        this.tipPosY = this.tipLayer.y;
+        this.listPosX = this.listLayer.x;
+
+        var self = this;
+        pomelo.on('onAdd', function (data) {
+            var user = data.user;
+            var wordAdd = 'wellcome ' + user + ' join room';
+            self.showTip(wordAdd);
+            account.addMember(user);
+            self.addOneForList(user);
+        });
+        pomelo.on('onLeave', function (data) {
+            var user = data.user;
+            var wordAdd = user + ' leave room';
+            self.showTip(wordAdd);
+            account.kickMember(user);
+            self.removeOneForList(user);
+        });
+        // 监听"onChat", 接收消息
+        pomelo.on('onChat', function (data) {
+            self.addChatItem(data);
+        });
+
+        //当从聊天断开时
+        pomelo.on('disconnect', function (reason) {
+            pomelo.removeAllListeners();
+            self.tipLayer.stopAllActions();
+            cc.director.loadScene('load');
+        });
+
+        this.initList();
     },
 
     // called every frame
@@ -43,32 +154,16 @@ cc.Class({
         return word;
     },
 
-    createList: function createList() {
-        for (var i = 1; i < 21; ++i) {
-            var item = cc.instantiate(this.chatItem);
-            var label = item.getComponent(cc.RichText);
-            label.string = this.replaceString(label.string, '11--' + i, 'A' + i, 'B' + i);
-            this.viewContent.node.addChild(item);
-        }
-    },
-
-    //arguments[1]eventData
-    clickShowBtn: function clickShowBtn() {
-        this.viewContent.node.removeAllChildren();
-        this.viewContent.node.height = 0;
-    },
-
-    clickEnterBtn: function clickEnterBtn() {
-        if (this.enterText.string == undefined || this.enterText.string == '' || this.enterText.string == null) {
-            console.log('plase enter word---');
-            return;
-        }
+    addChatItem: function addChatItem(data) {
         var item = cc.instantiate(this.chatItem);
         var label = item.getComponent(cc.RichText);
         var now = new Date();
-        label.string = this.replaceString(label.string, now.Format('yyyy-MM-dd hh:mm:ss') + '\t', 'C', 'D', this.enterText.string);
-        this.enterText.string = '';
+        var word = '<color=#00ff00>@</c><color=#0fffff><br/>@</c><color=#00ff00> says to</c><color=#0fffff> @ :<br/>@';
+        var to = data.target === '*' ? 'All' : data.target;
+        word = this.replaceString(word, now.Format('yyyy-MM-dd hh:mm:ss'), data.from, to, data.msg);
+        label.string = word;
         this.viewContent.node.addChild(item);
+
         var maskSizeH = this.scrollView.node.getChildByName('view').height;
         var curContentHeight = this.viewContent.node.height + item.height;
         if (maskSizeH >= curContentHeight) {
@@ -91,8 +186,31 @@ cc.Class({
         }
     },
 
+    //arguments[1]eventData
+    clickShowBtn: function clickShowBtn() {
+        this.moveList();
+    },
+
+    clickEnterBtn: function clickEnterBtn() {
+        if (this.enterText.string == undefined || this.enterText.string == '' || this.enterText.string == null) {
+            return;
+        }
+        var route = "chat.chatHandler.send",
+            target = this.toLab.string === 'All' ? '*' : this.toLab.string,
+            msg = this.enterText.string;
+        var self = this;
+        pomelo.request(route, {
+            rid: self.roomLab.string,
+            content: msg,
+            from: self.nameLab.string,
+            target: target
+        }, function (data) {
+            self.enterText.string = '';
+        });
+    },
+
     clickReturnBtn: function clickReturnBtn() {
-        cc.director.loadScene('load');
+        pomelo.disconnect();
     }
 });
 

@@ -2,24 +2,12 @@
 cc._RF.push(module, '280c3rsZJJKnZ9RqbALVwtK', 'Load');
 // Script/Load.js
 
-"use strict";
+'use strict';
 
+// require('./pomelo-client/pomeloclient');
 var pomelo = window.pomelo;
-var username;
-var users;
-var rid;
-var base = 1000;
-var increase = 25;
-var reg = /^[a-zA-Z0-9_\u4e00-\u9fa5]+$/;
-var LOGIN_ERROR = "There is no server to log in, please wait.";
-var LENGTH_ERROR = "Name/Channel is too long or too short. 20 character max.";
-var NAME_ERROR = "Bad character in Name/Channel. Can only have letters, numbers, Chinese characters, and '_'";
-var DUPLICATE_ERROR = "Please change your name to login.";
-
-var Account = require('Account');
-var account = new Account();
-window.account = account;
-
+require('Account');
+var account = window.account;
 cc.Class({
     extends: cc.Component,
 
@@ -44,6 +32,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function onLoad() {
+        this.isEnter = false;
         var localName = account.getUserName();
         if (localName) {
             this.nameEditBox.string = localName;
@@ -65,8 +54,8 @@ cc.Class({
     queryEntry: function queryEntry(uid, callback) {
         var route = 'gate.gateHandler.queryEntry';
         pomelo.init({
-            host: window.location.hostname,
-            port: 3014,
+            host: '127.0.0.1',
+            port: 15014,
             log: true
         }, function () {
             pomelo.request(route, {
@@ -84,14 +73,16 @@ cc.Class({
 
 
     clickJoinBtn: function clickJoinBtn() {
-        if (this.nameEditBox.string === null || this.channelEditBox.string === null || this.nameEditBox.string === '' || this.channelEditBox.string === '') {
+        if (this.nameEditBox.string === null || this.channelEditBox.string === null || this.nameEditBox.string === '' || this.channelEditBox.string === '' || this.isEnter) {
             return;
         }
-
+        this.isEnter = true;
         //query entry of connection
         var self = this;
         var uid = this.nameEditBox.string;
         var rid = this.channelEditBox.string;
+        account.setUserName(uid);
+        account.setUserChannel(rid);
         self.queryEntry(uid, function (host, port) {
             pomelo.init({
                 host: host,
@@ -104,11 +95,18 @@ cc.Class({
                     rid: rid
                 }, function (data) {
                     if (data.error) {
-                        cc.log(DUPLICATE_ERROR);
+                        cc.log("DUPLICATE_ERROR");
                         return;
                     }
-                    cc.log('---------11111111111');
-                    cc.log(data);
+                    var memGroup = {};
+                    for (var i = 0; i < data.users.length; i++) {
+                        var value = data.users[i];
+                        if (value !== uid) {
+                            memGroup[value] = value;
+                        }
+                    };
+                    account.setMembers(memGroup);
+                    cc.director.loadScene("chat");
                 });
             });
         });

@@ -75,7 +75,8 @@
     "_N$font": null,
     "_N$maxWidth": 460,
     "_N$lineHeight": 50,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
