@@ -1,99 +1,128 @@
-2018-02-02T01:03:53.468Z - normal: Load ~/.CocosCreator/settings.json
-2018-02-02T01:03:53.472Z - normal: checking language setting...
-2018-02-02T01:03:53.472Z - normal: Language: zh
-2018-02-02T01:03:54.326Z - success: protocol editor-framework registered
-2018-02-02T01:03:54.326Z - success: protocol app registered
-2018-02-02T01:03:54.326Z - success: protocol theme registered
-2018-02-02T01:03:54.326Z - success: protocol packages registered
-2018-02-02T01:03:54.326Z - success: protocol unpack registerred
-2018-02-02T01:03:54.326Z - success: protocol disable-commonjs registerred
-2018-02-02T01:03:54.637Z - normal: connected!
-2018-02-02T01:03:54.638Z - normal: Check project /Users/song/Documents/Chat/client
-2018-02-02T01:03:54.640Z - normal: Initializing Cocos2d
-2018-02-02T01:03:54.874Z - normal: Initializing Asset Database
-2018-02-02T01:03:54.906Z - success: protocol uuid registerred
-2018-02-02T01:03:54.906Z - success: protocol db registerred
-2018-02-02T01:03:54.906Z - success: protocol thumbnail registerred
-2018-02-02T01:03:54.907Z - normal: Loading editor/builtin packages
-2018-02-02T01:03:54.935Z - success: anysdk loaded
-2018-02-02T01:03:55.066Z - success: assets loaded
-2018-02-02T01:03:55.070Z - success: builder loaded
-2018-02-02T01:03:55.073Z - success: cocos-analytics loaded
-2018-02-02T01:03:55.078Z - success: console loaded
-2018-02-02T01:03:55.083Z - success: hierarchy loaded
-2018-02-02T01:03:55.089Z - success: inspector loaded
-2018-02-02T01:03:55.091Z - success: keystore loaded
-2018-02-02T01:03:55.095Z - success: node-library loaded
-2018-02-02T01:03:55.105Z - success: package-asset loaded
-2018-02-02T01:03:55.113Z - success: preferences loaded
-2018-02-02T01:03:55.117Z - success: project-exporter loaded
-2018-02-02T01:03:55.135Z - success: project-importer loaded
-2018-02-02T01:03:55.138Z - success: project-settings loaded
-2018-02-02T01:03:55.141Z - success: ui-kit loaded
-2018-02-02T01:03:55.146Z - success: ui-grid loaded
-2018-02-02T01:03:55.151Z - success: scene loaded
-2018-02-02T01:03:55.153Z - success: sprite-editor loaded
-2018-02-02T01:03:55.158Z - success: store loaded
-2018-02-02T01:03:55.165Z - success: timeline loaded
-2018-02-02T01:03:55.165Z - normal: Loading builtin packages
-2018-02-02T01:03:55.169Z - success: asset-db-debugger loaded
-2018-02-02T01:03:55.170Z - success: color-picker loaded
-2018-02-02T01:03:55.174Z - success: package-manager loaded
-2018-02-02T01:03:55.180Z - success: sdkbox loaded
-2018-02-02T01:03:55.185Z - success: tester loaded
-2018-02-02T01:03:55.190Z - success: ui-kit-preview-extra loaded
-2018-02-02T01:03:55.193Z - success: ui-kit-preview loaded
-2018-02-02T01:03:55.196Z - success: ui-tree loaded
-2018-02-02T01:03:56.330Z - normal: Initializing project /Users/song/Documents/Chat/client
-2018-02-02T01:03:56.333Z - normal: Loading packages
-2018-02-02T01:03:56.337Z - normal: Watching packages
-2018-02-02T01:03:56.348Z - normal: Run Application
-2018-02-02T01:03:56.868Z - success: preview server running at http://localhost:7456
-2018-02-02T01:04:01.481Z - normal: 1.8.0
-2018-02-02T03:57:50.788Z - warn: The Asset used in scene "load.fire" is missing. Detailed information:
-Asset url: "db://assets/Scene/load.fire"
-Missing uuid: "f1faec6a-63de-4c4e-8c57-88c3e64bc75b"
-
-2018-02-02T03:57:50.790Z - warn: The Asset used in scene "load.fire" is missing. Detailed information:
-Asset url: "db://assets/Scene/load.fire"
-Missing uuid: "f1faec6a-63de-4c4e-8c57-88c3e64bc75b"
-
-2018-02-02T08:07:30.780Z - info: 插件脚本在编辑器中加载时，在最外层用 var 声明的变量将不再做为全局变量。如有需要，请改用 "window.xx = yy;" 来定义全局变量，否则编辑器下可能会报错。 😂
-插件脚本："/Users/song/Documents/Chat/client/assets/Script/pomelo-client/pomeloclient.js"
-所在行："var bt2Str = function(byteArray,start,end) {"
-2018-02-02T08:43:00.640Z - failed: [db-task][sync-changes] Failed to import asset /Users/song/Documents/Chat/client/assets/Script/Chat.js, message: Compile error: SyntaxError: /Users/song/Documents/Chat/client/assets/Script/Chat.js: Unexpected token (210:8)
-  208 |             msg = this.enterText.string;
-  209 |         if(target=='All')
-> 210 |         let self = this;
-      |         ^
-  211 |         pomelo.request(route, {
-  212 |             rid: self.roomLab.string,
-  213 |             content: msg,
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
-    at Parser.pp$1.parseStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1858:30)
-    at Parser.pp$1.parseIfStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2059:26)
-    at Parser.pp$1.parseStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1846:19)
-    at Parser.pp$1.parseBlockBody (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2268:21)
-    at Parser.pp$1.parseBlock (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2247:8)
-    at Parser.pp$3.parseFunctionBody (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4235:22)
-    at Parser.pp$1.parseFunction (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2386:8)
-    at Parser.pp$3.parseFunctionExpression (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3760:17)
-2018-02-02T08:43:05.989Z - failed: [db-task][sync-changes] Failed to import asset /Users/song/Documents/Chat/client/assets/Script/Chat.js, message: Compile error: SyntaxError: /Users/song/Documents/Chat/client/assets/Script/Chat.js: Unexpected token (210:8)
-  208 |             msg = this.enterText.string;
-  209 |         if(target=='All')
-> 210 |         let self = this;
-      |         ^
-  211 |         pomelo.request(route, {
-  212 |             rid: self.roomLab.string,
-  213 |             content: msg,
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
-    at Parser.pp$1.parseStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1858:30)
-    at Parser.pp$1.parseIfStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2059:26)
-    at Parser.pp$1.parseStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1846:19)
-    at Parser.pp$1.parseBlockBody (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2268:21)
-    at Parser.pp$1.parseBlock (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2247:8)
-    at Parser.pp$3.parseFunctionBody (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4235:22)
-    at Parser.pp$1.parseFunction (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2386:8)
-    at Parser.pp$3.parseFunctionExpression (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3760:17)
+2018-07-04T08:05:17.522Z - normal: Load ~/.CocosCreator/settings.json
+2018-07-04T08:05:17.525Z - normal: checking language setting...
+2018-07-04T08:05:17.525Z - normal: Language: zh
+2018-07-04T08:05:18.083Z - success: protocol editor-framework registered
+2018-07-04T08:05:18.083Z - success: protocol app registered
+2018-07-04T08:05:18.083Z - success: protocol theme registered
+2018-07-04T08:05:18.083Z - success: protocol packages registered
+2018-07-04T08:05:18.083Z - success: protocol unpack registerred
+2018-07-04T08:05:18.084Z - success: protocol disable-commonjs registerred
+2018-07-04T08:05:18.251Z - normal: connected!
+2018-07-04T08:05:18.254Z - normal: Check project /Users/song/Documents/Chat/client
+2018-07-04T08:05:18.264Z - normal: Initializing Cocos2d
+2018-07-04T08:05:18.432Z - normal: Initializing Asset Database
+2018-07-04T08:05:18.459Z - success: protocol uuid registerred
+2018-07-04T08:05:18.459Z - success: protocol db registerred
+2018-07-04T08:05:18.459Z - success: protocol thumbnail registerred
+2018-07-04T08:05:18.459Z - normal: Loading editor/builtin packages
+2018-07-04T08:05:18.476Z - success: anysdk loaded
+2018-07-04T08:05:18.583Z - success: assets loaded
+2018-07-04T08:05:18.587Z - success: builder loaded
+2018-07-04T08:05:18.589Z - success: cocos-analytics loaded
+2018-07-04T08:05:18.594Z - success: console loaded
+2018-07-04T08:05:18.598Z - success: hierarchy loaded
+2018-07-04T08:05:18.602Z - success: inspector loaded
+2018-07-04T08:05:18.603Z - success: keystore loaded
+2018-07-04T08:05:18.607Z - success: node-library loaded
+2018-07-04T08:05:18.609Z - success: package-asset loaded
+2018-07-04T08:05:18.610Z - success: preferences loaded
+2018-07-04T08:05:18.613Z - success: project-exporter loaded
+2018-07-04T08:05:18.629Z - success: project-importer loaded
+2018-07-04T08:05:18.633Z - success: project-settings loaded
+2018-07-04T08:05:18.636Z - success: ui-kit loaded
+2018-07-04T08:05:18.640Z - success: ui-grid loaded
+2018-07-04T08:05:18.644Z - success: scene loaded
+2018-07-04T08:05:18.645Z - success: sprite-editor loaded
+2018-07-04T08:05:18.649Z - success: store loaded
+2018-07-04T08:05:18.655Z - success: timeline loaded
+2018-07-04T08:05:18.655Z - normal: Loading builtin packages
+2018-07-04T08:05:18.659Z - success: asset-db-debugger loaded
+2018-07-04T08:05:18.660Z - success: color-picker loaded
+2018-07-04T08:05:18.664Z - success: package-manager loaded
+2018-07-04T08:05:18.668Z - success: sdkbox loaded
+2018-07-04T08:05:18.672Z - success: tester loaded
+2018-07-04T08:05:18.676Z - success: ui-kit-preview-extra loaded
+2018-07-04T08:05:18.680Z - success: ui-kit-preview loaded
+2018-07-04T08:05:18.683Z - success: ui-tree loaded
+2018-07-04T08:05:19.590Z - normal: Initializing project /Users/song/Documents/Chat/client
+2018-07-04T08:05:19.594Z - normal: Loading packages
+2018-07-04T08:05:19.599Z - normal: Watching packages
+2018-07-04T08:05:19.610Z - normal: Run Application
+2018-07-04T08:05:20.467Z - success: preview server running at http://localhost:7456
+2018-07-04T08:05:24.604Z - normal: 1.8.0
+2018-07-04T08:05:29.464Z - normal: Simulator: WORKAREA WIDTH 1920.00, HEIGHT 1035.00
+2018-07-04T08:05:29.464Z - normal: Simulator: FRAME SCALE = 0.75
+2018-07-04T08:05:29.470Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
+2018-07-04T08:05:29.472Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
+2018-07-04T08:05:29.472Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
+2018-07-04T08:05:29.536Z - normal: Simulator: 
+2018-07-04T08:05:29.536Z - normal: Simulator: {
+2018-07-04T08:05:29.536Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2018-07-04T08:05:29.537Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2018-07-04T08:05:29.537Z - normal: Simulator: 	cocos2d.x.version: 1.7.0
+2018-07-04T08:05:29.537Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2018-07-04T08:05:29.556Z - normal: Simulator: 	gl.supports_PVRTC: false
+2018-07-04T08:05:29.558Z - normal: Simulator: 	gl.renderer: Intel Iris Pro OpenGL Engine
+2018-07-04T08:05:29.559Z - normal: Simulator: 	cocos2d.x.compiled_with_profiler: false
+2018-07-04T08:05:29.561Z - normal: Simulator: 	gl.max_texture_size: 16384
+2018-07-04T08:05:29.561Z - normal: Simulator: 	gl.supports_ETC1: false
+2018-07-04T08:05:29.562Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2018-07-04T08:05:29.562Z - normal: Simulator: 	cocos2d.x.build_type: DEBUG
+2018-07-04T08:05:29.562Z - normal: Simulator: 	gl.max_texture_units: 16
+2018-07-04T08:05:29.562Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2018-07-04T08:05:29.563Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2018-07-04T08:05:29.563Z - normal: Simulator: 	gl.supports_NPOT: true
+2018-07-04T08:05:29.563Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.32.48
+2018-07-04T08:05:29.563Z - normal: Simulator: 	cocos2d.x.compiled_with_gl_state_cache: true
+2018-07-04T08:05:29.564Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2018-07-04T08:05:29.564Z - normal: Simulator: }
+2018-07-04T08:05:29.564Z - normal: Simulator: 
+2018-07-04T08:05:29.564Z - normal: Simulator: 
+2018-07-04T08:05:29.565Z - normal: Simulator: cocos2d: warning, Director::setProjection() failed because size is 0
+2018-07-04T08:05:29.583Z - normal: Simulator: Project Config:
+2018-07-04T08:05:29.583Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2018-07-04T08:05:29.584Z - normal: Simulator:     writable path: $(PROJDIR)/
+2018-07-04T08:05:29.584Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2018-07-04T08:05:29.584Z - normal: Simulator:     frame size: 1920 x 1080
+2018-07-04T08:05:29.585Z - normal: Simulator:     frame scale: 0.75
+2018-07-04T08:05:29.585Z - normal: Simulator:     show console: NO
+2018-07-04T08:05:29.585Z - normal: Simulator:     write debug log: NO ()
+2018-07-04T08:05:29.585Z - normal: Simulator:     listen: 
+2018-07-04T08:05:29.586Z - normal: Simulator:     debugger: none
+2018-07-04T08:05:29.586Z - normal: Simulator:     add searching path:
+2018-07-04T08:05:29.586Z - normal: Simulator: ------------------------------------------------
+2018-07-04T08:05:29.587Z - normal: Simulator: LOAD Js FILE: main.js
+2018-07-04T08:05:29.587Z - normal: Simulator: ------------------------------------------------
+2018-07-04T08:05:29.587Z - normal: Simulator: Initializing JavaScriptCore 
+2018-07-04T08:05:29.649Z - normal: Simulator: JS: Cocos2d-x-lite v1.7.0
+2018-07-04T08:05:29.848Z - normal: Simulator: iShow!
+2018-07-04T08:05:30.033Z - normal: Simulator: JS: InitScene: 1.7839999999999918ms
+2018-07-04T08:05:30.033Z - normal: Simulator: JS: AutoRelease: 0.125ms
+2018-07-04T08:05:30.033Z - normal: Simulator: JS: Destroy: 0.08300000000002683ms
+2018-07-04T08:05:30.034Z - normal: Simulator: JS: AttachPersist: 0.008000000000038199ms
+2018-07-04T08:05:30.043Z - normal: Simulator: setReturnType not implemented
+2018-07-04T08:05:30.048Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
+2018-07-04T08:05:30.048Z - normal: Simulator: setReturnType not implemented
+2018-07-04T08:05:30.048Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
+2018-07-04T08:05:30.049Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
+2018-07-04T08:05:30.049Z - normal: Simulator: setReturnType not implemented
+2018-07-04T08:05:30.057Z - normal: Simulator: setReturnType not implemented
+2018-07-04T08:05:30.058Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
+2018-07-04T08:05:30.058Z - normal: Simulator: setReturnType not implemented
+2018-07-04T08:05:30.059Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
+2018-07-04T08:05:30.059Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
+2018-07-04T08:05:30.059Z - normal: Simulator: setReturnType not implemented
+2018-07-04T08:05:30.068Z - normal: Simulator: JS: Activate: 34.761000000000024ms
+2018-07-04T08:05:30.071Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
+2018-07-04T08:05:30.072Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
+2018-07-04T08:05:53.951Z - normal: Simulator: ScriptEngine::cleanup begin ...
+2018-07-04T08:05:53.952Z - normal: Simulator: GC begin ..., (Native -> JS map) count: 57
+2018-07-04T08:05:53.959Z - normal: Simulator: GC end ..., (Native -> JS map) count: 55
+2018-07-04T08:05:53.960Z - normal: Simulator: GC begin ..., (Native -> JS map) count: 55
+2018-07-04T08:05:53.961Z - normal: Simulator: GC end ..., (Native -> JS map) count: 55
+2018-07-04T08:05:53.962Z - normal: Simulator: GC begin ..., (Native -> JS map) count: 55
+2018-07-04T08:05:53.964Z - normal: Simulator: GC end ..., (Native -> JS map) count: 55
+2018-07-04T08:05:53.977Z - normal: Simulator: setReturnType not implemented
+2018-07-04T08:05:53.977Z - normal: Simulator: setReturnType not implemented
+2018-07-04T08:05:53.977Z - normal: Simulator: ScriptEngine::cleanup end ...
+2018-07-04T08:05:56.409Z - info: shutdown preview server
