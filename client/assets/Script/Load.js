@@ -1,4 +1,5 @@
-// require('./pomelo-client/pomeloclient');
+// window.io = require('./lib/socket.io');
+// require('./lib/pomeloclient');
 var pomelo = window.pomelo;
 require('Account');
 var account = window.account
@@ -48,7 +49,7 @@ cc.Class({
     queryEntry(uid, callback) {
         var route = 'gate.gateHandler.queryEntry';
         pomelo.init({
-            host: '127.0.0.1',
+            host: '192.168.31.11',
             port: 15014,
             log: true
         }, function () {

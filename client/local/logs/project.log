@@ -1,128 +1,65 @@
-2018-07-04T08:05:17.522Z - normal: Load ~/.CocosCreator/settings.json
-2018-07-04T08:05:17.525Z - normal: checking language setting...
-2018-07-04T08:05:17.525Z - normal: Language: zh
-2018-07-04T08:05:18.083Z - success: protocol editor-framework registered
-2018-07-04T08:05:18.083Z - success: protocol app registered
-2018-07-04T08:05:18.083Z - success: protocol theme registered
-2018-07-04T08:05:18.083Z - success: protocol packages registered
-2018-07-04T08:05:18.083Z - success: protocol unpack registerred
-2018-07-04T08:05:18.084Z - success: protocol disable-commonjs registerred
-2018-07-04T08:05:18.251Z - normal: connected!
-2018-07-04T08:05:18.254Z - normal: Check project /Users/song/Documents/Chat/client
-2018-07-04T08:05:18.264Z - normal: Initializing Cocos2d
-2018-07-04T08:05:18.432Z - normal: Initializing Asset Database
-2018-07-04T08:05:18.459Z - success: protocol uuid registerred
-2018-07-04T08:05:18.459Z - success: protocol db registerred
-2018-07-04T08:05:18.459Z - success: protocol thumbnail registerred
-2018-07-04T08:05:18.459Z - normal: Loading editor/builtin packages
-2018-07-04T08:05:18.476Z - success: anysdk loaded
-2018-07-04T08:05:18.583Z - success: assets loaded
-2018-07-04T08:05:18.587Z - success: builder loaded
-2018-07-04T08:05:18.589Z - success: cocos-analytics loaded
-2018-07-04T08:05:18.594Z - success: console loaded
-2018-07-04T08:05:18.598Z - success: hierarchy loaded
-2018-07-04T08:05:18.602Z - success: inspector loaded
-2018-07-04T08:05:18.603Z - success: keystore loaded
-2018-07-04T08:05:18.607Z - success: node-library loaded
-2018-07-04T08:05:18.609Z - success: package-asset loaded
-2018-07-04T08:05:18.610Z - success: preferences loaded
-2018-07-04T08:05:18.613Z - success: project-exporter loaded
-2018-07-04T08:05:18.629Z - success: project-importer loaded
-2018-07-04T08:05:18.633Z - success: project-settings loaded
-2018-07-04T08:05:18.636Z - success: ui-kit loaded
-2018-07-04T08:05:18.640Z - success: ui-grid loaded
-2018-07-04T08:05:18.644Z - success: scene loaded
-2018-07-04T08:05:18.645Z - success: sprite-editor loaded
-2018-07-04T08:05:18.649Z - success: store loaded
-2018-07-04T08:05:18.655Z - success: timeline loaded
-2018-07-04T08:05:18.655Z - normal: Loading builtin packages
-2018-07-04T08:05:18.659Z - success: asset-db-debugger loaded
-2018-07-04T08:05:18.660Z - success: color-picker loaded
-2018-07-04T08:05:18.664Z - success: package-manager loaded
-2018-07-04T08:05:18.668Z - success: sdkbox loaded
-2018-07-04T08:05:18.672Z - success: tester loaded
-2018-07-04T08:05:18.676Z - success: ui-kit-preview-extra loaded
-2018-07-04T08:05:18.680Z - success: ui-kit-preview loaded
-2018-07-04T08:05:18.683Z - success: ui-tree loaded
-2018-07-04T08:05:19.590Z - normal: Initializing project /Users/song/Documents/Chat/client
-2018-07-04T08:05:19.594Z - normal: Loading packages
-2018-07-04T08:05:19.599Z - normal: Watching packages
-2018-07-04T08:05:19.610Z - normal: Run Application
-2018-07-04T08:05:20.467Z - success: preview server running at http://localhost:7456
-2018-07-04T08:05:24.604Z - normal: 1.8.0
-2018-07-04T08:05:29.464Z - normal: Simulator: WORKAREA WIDTH 1920.00, HEIGHT 1035.00
-2018-07-04T08:05:29.464Z - normal: Simulator: FRAME SCALE = 0.75
-2018-07-04T08:05:29.470Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
-2018-07-04T08:05:29.472Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
-2018-07-04T08:05:29.472Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
-2018-07-04T08:05:29.536Z - normal: Simulator: 
-2018-07-04T08:05:29.536Z - normal: Simulator: {
-2018-07-04T08:05:29.536Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
-2018-07-04T08:05:29.537Z - normal: Simulator: 	gl.supports_vertex_array_object: true
-2018-07-04T08:05:29.537Z - normal: Simulator: 	cocos2d.x.version: 1.7.0
-2018-07-04T08:05:29.537Z - normal: Simulator: 	gl.vendor: Intel Inc.
-2018-07-04T08:05:29.556Z - normal: Simulator: 	gl.supports_PVRTC: false
-2018-07-04T08:05:29.558Z - normal: Simulator: 	gl.renderer: Intel Iris Pro OpenGL Engine
-2018-07-04T08:05:29.559Z - normal: Simulator: 	cocos2d.x.compiled_with_profiler: false
-2018-07-04T08:05:29.561Z - normal: Simulator: 	gl.max_texture_size: 16384
-2018-07-04T08:05:29.561Z - normal: Simulator: 	gl.supports_ETC1: false
-2018-07-04T08:05:29.562Z - normal: Simulator: 	gl.supports_BGRA8888: false
-2018-07-04T08:05:29.562Z - normal: Simulator: 	cocos2d.x.build_type: DEBUG
-2018-07-04T08:05:29.562Z - normal: Simulator: 	gl.max_texture_units: 16
-2018-07-04T08:05:29.562Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
-2018-07-04T08:05:29.563Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
-2018-07-04T08:05:29.563Z - normal: Simulator: 	gl.supports_NPOT: true
-2018-07-04T08:05:29.563Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.32.48
-2018-07-04T08:05:29.563Z - normal: Simulator: 	cocos2d.x.compiled_with_gl_state_cache: true
-2018-07-04T08:05:29.564Z - normal: Simulator: 	gl.supports_OES_depth24: false
-2018-07-04T08:05:29.564Z - normal: Simulator: }
-2018-07-04T08:05:29.564Z - normal: Simulator: 
-2018-07-04T08:05:29.564Z - normal: Simulator: 
-2018-07-04T08:05:29.565Z - normal: Simulator: cocos2d: warning, Director::setProjection() failed because size is 0
-2018-07-04T08:05:29.583Z - normal: Simulator: Project Config:
-2018-07-04T08:05:29.583Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
-2018-07-04T08:05:29.584Z - normal: Simulator:     writable path: $(PROJDIR)/
-2018-07-04T08:05:29.584Z - normal: Simulator:     script file: $(PROJDIR)/main.js
-2018-07-04T08:05:29.584Z - normal: Simulator:     frame size: 1920 x 1080
-2018-07-04T08:05:29.585Z - normal: Simulator:     frame scale: 0.75
-2018-07-04T08:05:29.585Z - normal: Simulator:     show console: NO
-2018-07-04T08:05:29.585Z - normal: Simulator:     write debug log: NO ()
-2018-07-04T08:05:29.585Z - normal: Simulator:     listen: 
-2018-07-04T08:05:29.586Z - normal: Simulator:     debugger: none
-2018-07-04T08:05:29.586Z - normal: Simulator:     add searching path:
-2018-07-04T08:05:29.586Z - normal: Simulator: ------------------------------------------------
-2018-07-04T08:05:29.587Z - normal: Simulator: LOAD Js FILE: main.js
-2018-07-04T08:05:29.587Z - normal: Simulator: ------------------------------------------------
-2018-07-04T08:05:29.587Z - normal: Simulator: Initializing JavaScriptCore 
-2018-07-04T08:05:29.649Z - normal: Simulator: JS: Cocos2d-x-lite v1.7.0
-2018-07-04T08:05:29.848Z - normal: Simulator: iShow!
-2018-07-04T08:05:30.033Z - normal: Simulator: JS: InitScene: 1.7839999999999918ms
-2018-07-04T08:05:30.033Z - normal: Simulator: JS: AutoRelease: 0.125ms
-2018-07-04T08:05:30.033Z - normal: Simulator: JS: Destroy: 0.08300000000002683ms
-2018-07-04T08:05:30.034Z - normal: Simulator: JS: AttachPersist: 0.008000000000038199ms
-2018-07-04T08:05:30.043Z - normal: Simulator: setReturnType not implemented
-2018-07-04T08:05:30.048Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
-2018-07-04T08:05:30.048Z - normal: Simulator: setReturnType not implemented
-2018-07-04T08:05:30.048Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
-2018-07-04T08:05:30.049Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
-2018-07-04T08:05:30.049Z - normal: Simulator: setReturnType not implemented
-2018-07-04T08:05:30.057Z - normal: Simulator: setReturnType not implemented
-2018-07-04T08:05:30.058Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
-2018-07-04T08:05:30.058Z - normal: Simulator: setReturnType not implemented
-2018-07-04T08:05:30.059Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
-2018-07-04T08:05:30.059Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
-2018-07-04T08:05:30.059Z - normal: Simulator: setReturnType not implemented
-2018-07-04T08:05:30.068Z - normal: Simulator: JS: Activate: 34.761000000000024ms
-2018-07-04T08:05:30.071Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
-2018-07-04T08:05:30.072Z - normal: Simulator: [Edit text] content size = (160.000000, 40.000000)
-2018-07-04T08:05:53.951Z - normal: Simulator: ScriptEngine::cleanup begin ...
-2018-07-04T08:05:53.952Z - normal: Simulator: GC begin ..., (Native -> JS map) count: 57
-2018-07-04T08:05:53.959Z - normal: Simulator: GC end ..., (Native -> JS map) count: 55
-2018-07-04T08:05:53.960Z - normal: Simulator: GC begin ..., (Native -> JS map) count: 55
-2018-07-04T08:05:53.961Z - normal: Simulator: GC end ..., (Native -> JS map) count: 55
-2018-07-04T08:05:53.962Z - normal: Simulator: GC begin ..., (Native -> JS map) count: 55
-2018-07-04T08:05:53.964Z - normal: Simulator: GC end ..., (Native -> JS map) count: 55
-2018-07-04T08:05:53.977Z - normal: Simulator: setReturnType not implemented
-2018-07-04T08:05:53.977Z - normal: Simulator: setReturnType not implemented
-2018-07-04T08:05:53.977Z - normal: Simulator: ScriptEngine::cleanup end ...
-2018-07-04T08:05:56.409Z - info: shutdown preview server
+2019-05-10T02:24:01.254Z - normal: Load ~/.CocosCreator/settings.json
+2019-05-10T02:24:01.347Z - normal: Initializing Asset Database
+2019-05-10T02:24:01.351Z - normal: checking language setting...
+2019-05-10T02:24:01.352Z - normal: Language: zh
+2019-05-10T02:24:02.237Z - success: preview server running at http://localhost:7456
+2019-05-10T02:24:02.252Z - success: protocol editor-framework registered
+2019-05-10T02:24:02.252Z - success: protocol app registered
+2019-05-10T02:24:02.252Z - success: protocol theme registered
+2019-05-10T02:24:02.252Z - success: protocol packages registered
+2019-05-10T02:24:02.252Z - success: protocol uuid registerred
+2019-05-10T02:24:02.253Z - success: protocol db registerred
+2019-05-10T02:24:02.253Z - success: protocol thumbnail registerred
+2019-05-10T02:24:02.253Z - success: protocol unpack registerred
+2019-05-10T02:24:02.253Z - success: protocol disable-commonjs registerred
+2019-05-10T02:24:02.460Z - normal: connected!
+2019-05-10T02:24:02.462Z - normal: Check project /Users/song/Documents/Chat/client
+2019-05-10T02:24:02.464Z - normal: Initializing project /Users/song/Documents/Chat/client
+2019-05-10T02:24:02.966Z - normal: Initializing Cocos2d
+2019-05-10T02:24:03.848Z - normal: Initializing engine extends
+2019-05-10T02:24:03.884Z - success: asset-db-debugger loaded
+2019-05-10T02:24:03.885Z - success: baidu-adapter loaded
+2019-05-10T02:24:03.886Z - success: color-picker loaded
+2019-05-10T02:24:04.013Z - success: fb-audience-network loaded
+2019-05-10T02:24:04.066Z - success: fb-live-stream loaded
+2019-05-10T02:24:04.071Z - success: google-play-instant loaded
+2019-05-10T02:24:04.078Z - success: huawei-runtime loaded
+2019-05-10T02:24:04.079Z - success: jsb-adapter loaded
+2019-05-10T02:24:04.086Z - success: oppo-runtime loaded
+2019-05-10T02:24:04.092Z - success: package-manager loaded
+2019-05-10T02:24:04.277Z - success: qqplay-adapter loaded
+2019-05-10T02:24:04.280Z - success: runtime-dev-tools loaded
+2019-05-10T02:24:04.287Z - success: sdkbox loaded
+2019-05-10T02:24:04.295Z - success: tester loaded
+2019-05-10T02:24:04.302Z - success: ui-grid loaded
+2019-05-10T02:24:04.306Z - success: ui-kit-preview-extra loaded
+2019-05-10T02:24:04.312Z - success: ui-kit-preview loaded
+2019-05-10T02:24:04.316Z - success: ui-kit loaded
+2019-05-10T02:24:04.320Z - success: ui-tree loaded
+2019-05-10T02:24:04.327Z - success: vivo-runtime loaded
+2019-05-10T02:24:04.328Z - success: weapp-adapter loaded
+2019-05-10T02:24:04.394Z - success: assets loaded
+2019-05-10T02:24:04.399Z - success: builder loaded
+2019-05-10T02:24:04.719Z - success: cocos-services loaded
+2019-05-10T02:24:04.725Z - success: console loaded
+2019-05-10T02:24:04.766Z - success: fb-instant-games loaded
+2019-05-10T02:24:04.773Z - success: game-window loaded
+2019-05-10T02:24:04.774Z - success: google-instant-games loaded
+2019-05-10T02:24:04.779Z - success: hierarchy loaded
+2019-05-10T02:24:04.784Z - success: inspector loaded
+2019-05-10T02:24:04.785Z - success: keystore loaded
+2019-05-10T02:24:04.791Z - success: node-library loaded
+2019-05-10T02:24:04.792Z - success: package-asset loaded
+2019-05-10T02:24:04.794Z - success: preferences loaded
+2019-05-10T02:24:04.797Z - success: project-exporter loaded
+2019-05-10T02:24:04.805Z - success: project-importer loaded
+2019-05-10T02:24:04.808Z - success: project-settings loaded
+2019-05-10T02:24:04.814Z - success: scene loaded
+2019-05-10T02:24:04.816Z - success: simulator-debugger loaded
+2019-05-10T02:24:04.817Z - success: sprite-editor loaded
+2019-05-10T02:24:04.822Z - success: store loaded
+2019-05-10T02:24:04.828Z - success: timeline loaded
+2019-05-10T02:24:06.877Z - normal: Loading packages
+2019-05-10T02:24:06.883Z - normal: Watching packages
+2019-05-10T02:24:07.070Z - normal: Run Application
+2019-05-10T02:24:08.366Z - info: Cocos Services load base data!

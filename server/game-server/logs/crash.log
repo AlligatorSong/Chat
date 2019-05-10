@@ -1,4 +1,0 @@
-[2018-01-30 17:39:51.483] [INFO] crash-log - [32m[/Users/song/Documents/socket.io/game-server/node_modules/pomelo/lib/master/master.js] [39m[connector],[connector-server-1],[1517305191483],[disconnect]
-[2018-01-30 17:39:51.500] [INFO] crash-log - [32m[/Users/song/Documents/socket.io/game-server/node_modules/pomelo/lib/master/master.js] [39m[connector],[connector-server-2],[1517305191499],[disconnect]
-[2018-01-30 17:39:51.518] [INFO] crash-log - [32m[/Users/song/Documents/socket.io/game-server/node_modules/pomelo/lib/master/master.js] [39m[chat],[chat-server-1],[1517305191518],[disconnect]
-[2018-01-30 17:39:51.538] [INFO] crash-log - [32m[/Users/song/Documents/socket.io/game-server/node_modules/pomelo/lib/master/master.js] [39m[chat],[chat-server-2],[1517305191538],[disconnect]

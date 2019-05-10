@@ -3,11 +3,13 @@
     "__type__": "cc.Prefab",
     "_name": "toggle",
     "_objFlags": 0,
-    "_rawFiles": null,
+    "_native": "",
     "data": {
       "__id__": 1
     },
-    "asyncLoadAssets": false
+    "optimizationPolicy": 1,
+    "asyncLoadAssets": false,
+    "readonly": false
   },
   {
     "__type__": "cc.Node",
